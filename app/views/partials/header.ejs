@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <title>Nouveau projet</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="images/titre_DDT.png" alt="titre">
+      <nav>
+        <a href="/">Accueil</a>
+        <% if(!locals.user) { %>
+        <a href="/signup">S'inscrire</a>
+        <a href="/login">Se connecter</a>
+        <% } else { %>
+          <% if(locals.user.role === 'admin') { %>
+            <a href="/admin">Admin</a>
+            <% } %>
+        <a href="/profil">Profil</a>
+        <a href="/logout">Se déconnecter</a>
+        <% } %>
+    </nav>  
+    </header>
+    <main>

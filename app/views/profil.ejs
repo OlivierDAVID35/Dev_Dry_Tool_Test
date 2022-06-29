@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+        <h2>Page profil</h2>
+        <ul>
+            <li>
+                <p class="lead">Prénom : <%= locals.user.firstname %></p>
+            </li>
+            <li>
+                <p class="lead">Nom : <%= locals.user.lastname %></p>
+            </li>
+            <li>
+                <p class="lead">Email : <%= locals.user.email %></p>
+            </li>
+        </ul>
+<%- include('partials/footer') %>
